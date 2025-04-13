@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Bevy WASM Example</title>
+</head>
+<body>
+<h1>Bevy WASM Example</h1>
+<!-- Cargamos el JS que genera wasm-bindgen -->
+<script src="animation.js"></script>
+<script>
+    // Llamamos a wasm_bindgen, pasándole el .wasm generado
+    wasm_bindgen('animation_bg.wasm')
+        .then(() => {
+            console.log("Bevy app has started!");
+        })
+        .catch(err => console.error(err));
+</script>
+</body>
+</html>
