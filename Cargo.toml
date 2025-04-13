@@ -1,0 +1,16 @@
+[package]
+name = "animation"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+bevy = "0.11"      # O la versión estable más reciente de Bevy
+# Para la exportación a WebAssembly necesitaremos wasm-bindgen
+wasm-bindgen = "0.2"
+
+# Para UUID:
+uuid = { version = "1.16.0", default-features = false, features = ["v4", "js"] }
+
+[lib]
+crate-type = ["cdylib"]
